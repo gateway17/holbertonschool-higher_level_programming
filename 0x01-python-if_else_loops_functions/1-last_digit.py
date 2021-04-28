@@ -13,4 +13,4 @@ elif number1 < 6 and number1 != 0:
     txt = "and is less than 6 and not 0"
 elif number1 == 0:
     txt = "and is 0"
-print("Last digit of {:d} is {:d} {:s}".format(number,number1,txt))
+print("Last digit of {:d} is {:d} {:s}".format(number, number1, txt))
