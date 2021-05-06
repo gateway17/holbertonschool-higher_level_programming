@@ -6,7 +6,7 @@
 #        The first element should be the addition of
 # the first element of each argument.
 #        The second element should be the addition of
-# the second element of each argument.
+# the second element of each argument
 #    You are not allowed to import any module
 #    You can assume that the two tuples will only contain integers
 #    If a tuple is smaller than 2, use the value 0 for each missing integer
@@ -14,13 +14,7 @@
 
 
 def add_tuple(tuple_a=(), tuple_b=()):
-    tuple_c = []
-    if len(tuple_a) < 2:
-        while len(tuple_a) < 2:
-            tuple_a.append(0)
-    elif len(tuple_b) < 2:
-        while len(tuple_b) < 2:
-            tuple_b.append(0)
-    tuple_c.append(tuple_a[0] + tuple_b[0])
-    tuple_c.append(tuple_a[1] + tuple_b[1])
-    return tuple_c
+    sum1 = tuple_a[0] + tuple_b[0]
+    sum2 = tuple_a[1] + tuple_b[1]
+    total_tuple = (sum1, sum2)
+    return total_tuple

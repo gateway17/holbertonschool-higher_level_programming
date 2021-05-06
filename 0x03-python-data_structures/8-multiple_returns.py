@@ -8,9 +8,9 @@
 
 
 def multiple_returns(sentence):
-
-    t_tuple = ()
+    new_tuple = ()
     if sentence:
-        t_tuple = (len(sentence)), sentence[0]
+        new_tuple = len(sentence), sentence[0]
     else:
-        t_tuple = (len(sentence)), None
+        new_tuple = 0, None
+    return new_tuple

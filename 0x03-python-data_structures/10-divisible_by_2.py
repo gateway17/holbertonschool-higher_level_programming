@@ -9,11 +9,10 @@
 #    You are not allowed to import any module
 
 
-def divisible_by_2(my_list=[]):
-    if my_list:
-        for i in my_list:
-            if (i % 2) == 0:
-                new_tuple.append(True)
-            else:
-                new.append(False)
-        return new_tuple
+def multiple_returns(sentence):
+    new_tuple = ()
+    if sentence:
+        new_tuple = len(sentence), sentence[0]
+    else:
+        new_tuple = 0, None
+    return new_tuple

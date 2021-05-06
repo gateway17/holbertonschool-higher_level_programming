@@ -9,6 +9,11 @@
 #    You can assume that the list only contains integers
 #    You are not allowed to cast integers into strings
 #    You have to use str.format() to print integers
+
+
 def print_list_integer(my_list=[]):
-    for i in my_list:
-        print("{}".format(i))
+    var = len(my_list)
+    var2 = 0
+    while var2 < var:
+        print("{:d}".format(my_list[var2]))
+        var2 += 1

@@ -6,11 +6,14 @@
 #    You are not allowed to import any module
 #    You are not allowed to use str.replace()
 
-string = ""
-while ctr < len(my_string):
-    if my_string[ctr] == 'C' or my_string[ctr] == 'c':
-        ctr += 1
-    else:
-        new_string += my_string[ctr]
-        ctr += 1
+
+def no_c(my_string):
+    ctr = 0
+    new_string = ""
+    while ctr < len(my_string):
+        if my_string[ctr] == 'C' or my_string[ctr] == 'c':
+            ctr += 1
+        else:
+            new_string += my_string[ctr]
+            ctr += 1
     return new_string
