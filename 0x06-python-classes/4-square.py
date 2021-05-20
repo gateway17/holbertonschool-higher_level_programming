@@ -45,6 +45,6 @@ class Square:
         else:
             self.__size = value
 
-        def area(self):
-            """Returns the the Square."""
-            return self.__size ** 2
+    def area(self):
+        """Returns the the Square."""
+        return self.__size ** 2

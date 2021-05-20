@@ -21,7 +21,7 @@ Write a class Square that defines a square by: (based on 4-square.py)
 
 
 class Square:
-
+    """set a Square."""
     def __init__(self, size):
         """Set a Square"""
         if not isinstance(size, int):
@@ -59,4 +59,4 @@ class Square:
             for i in range(self.__size):
                 for i in range(self.__size):
                     print('#', end='')
-            print()
+                print()
