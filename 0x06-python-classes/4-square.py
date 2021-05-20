@@ -19,7 +19,7 @@ Write a class Square that defines a square by: (based on 3-square.py)
 
 class Square:
     """ Set a Square."""
-    def __init__(self, size):
+    def __init__(self, size=0):
         """Set a Square"""
         if not isinstance(size, int):
             raise TypeError('size must be an integer')
