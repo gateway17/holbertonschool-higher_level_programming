@@ -12,8 +12,6 @@ integer and boolean) for JSON serialization of an object:
     You are not allowed to import any module
 """
 
-import json
-
 
 def class_to_json(obj):
     """Returns diccionary of paremeter to after be serialized. """
