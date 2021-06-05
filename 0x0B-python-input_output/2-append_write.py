@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 """
-Write a function that appends a string at the end of a text file (UTF8) and returns the number of characters added:
+Write a function that appends a string at the end of
+a text file (UTF8) and returns the number of characters added:
 
     Prototype: def append_write(filename="", text=""):
     If the file doesn’t exist, it should be created
@@ -10,6 +11,7 @@ Write a function that appends a string at the end of a text file (UTF8) and retu
     You are not allowed to import any module
 
 """
+
 
 def append_write(filename="", text=""):
     with open(filename, 'a') as buffer:
