@@ -11,6 +11,6 @@ Write a function that returns the JSON representation of an object (string):
 
 
 def to_json_string(my_obj):
-
+    """Creates json object by recived data. """
     x = json.dumps(my_obj)
     return x

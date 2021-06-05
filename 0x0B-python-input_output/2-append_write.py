@@ -14,6 +14,7 @@ a text file (UTF8) and returns the number of characters added:
 
 
 def append_write(filename="", text=""):
+    """Appends string into a file. """
     with open(filename, 'a') as buffer:
         text = str(text)
         ctr = buffer.write(text)

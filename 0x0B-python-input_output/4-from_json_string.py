@@ -15,6 +15,6 @@ represented by a JSON string:
 
 
 def from_json_string(my_str):
-    """ """
+    """Loads json object to a python object. """
     x = json.loads(my_str)
     return x

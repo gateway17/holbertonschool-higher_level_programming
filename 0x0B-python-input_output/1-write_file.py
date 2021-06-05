@@ -15,7 +15,7 @@ and returns the number of characters written:
 
 
 def write_file(filename="", text=""):
-
+    """Creates a file and write text there. """
     with open(filename, 'r+', encoding="UTF-8") as buffer:
         text = str(text)
         ctr = buffer.write(text)
