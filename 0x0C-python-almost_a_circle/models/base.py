@@ -2,7 +2,7 @@
 
 
 class Base:
-    """ """
+    """Creates "IDs" for instances. """
 
     __nb_objects = 0
 
