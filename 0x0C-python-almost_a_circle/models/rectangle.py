@@ -36,8 +36,8 @@ class Rectangle(Base):
             raise ValueError("y must be > 0")
         else:
             self.__y = y
-
-        self.__id = super().__init__(id)
+        
+        super().__init__(id)
 
     @property
     def width(self):
@@ -112,16 +112,43 @@ class Rectangle(Base):
             print("")
 
     def update(self, *args):
-        """Updates new values for varibles:
+        """ Updates new values for varibles:
             self.id, self.__width, self.__height,self.__x ,self.__y
-         """
-        arguments = [self.id, self.__width, self.__height, self.__x, self.__y]
-        if len(args) > 0 and args is not None:
-            for i in args:
-                for e in len(arguments):
+        
+        """
 
-                    setattr(self, arguments[e], i)
+        if args is not None and len(args) > 0:
+            attributes = ["id", "width", "height", "x", "y"]
+            for idx, value in enumerate(args):
+                if idx < 5 and hasattr(self, attributes[idx]):
+                    setattr(self, attributes[idx], value)
 
-    def __str__(self) -> str:
+                else:
+                    print("Aparentemente no tiene", attributes[idx])
+            
+        else:
+            print("No entra al if")
+
+
+    def __str__(self):
         self.ft = "[Rectangle] ({}) {}/{} - {}/{}"
-        return (self.ft.format(self.__id, self.__x, self.__y, self.__width, self.__height))
+        return (self.ft.format(self.id, self.__x, self.__y, self.__width, self.__height))
+
+
+r1 = Rectangle(10, 10, 10, 10)
+print(r1)
+
+r1.update(89)
+print(r1)
+
+r1.update(89, 2)
+print(r1)
+
+r1.update(89, 2, 3)
+print(r1)
+
+r1.update(89, 2, 3, 4)
+print(r1)
+
+r1.update(89, 2, 3, 4, 5)
+print(r1)
