@@ -6,13 +6,32 @@ Creates and manage a Rectangle
 """
 
 from base import Base
-
+# Base = __import__("models.base", fromlist=[None]).Base
 
 class Rectangle(Base):
-    """Creates a Rectangle. """
+    """ Creates and manage a Rectangle
+
+    Properties:
+        width (int): width of the instance
+        height (int): height of the instance
+        x (int): x coordenate
+        y (int): y coordenate
+        id (int): objects ID
+
+    Methods:
+        __init__(self, width, height, x=0, y=0, id=None)
+        def area(self)
+        display(self)
+        update(self, *args, **kwargs)
+        def to_dictionary(self)
+
+    Magic Methods:
+        __str__(self)
+    
+    """
     def __init__(self, width, height, x=0, y=0, id=None):
         """Sets size for Rectangle
-        Arguments: width, height,[x=0, y=0] """
+        Arguments: width, height,[x=0, y=0], id=None """
 
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
@@ -46,12 +65,14 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """Getter for width. """
+        """Getter for width.
+        Get Rectangle's width information. """
         return self.__width
 
     @width.setter
     def width(self, s_width):
-        """Setter for width. """
+        """Setter for width.
+        Set Rectangle's width size."""
         if not isinstance(s_width, int):
             raise TypeError("width must be an integer")
         elif s_width <= 0:
@@ -61,7 +82,8 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """Getter for height. """
+        """Getter for height.
+        Get Rectangle's height information."""
         return self.__height
 
     @height.setter
@@ -76,7 +98,8 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """Getter for x. """
+        """Getter for x.
+        Get Rectangle's x coordenate information."""
 
         return self.__x
 
@@ -92,7 +115,8 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """Getter for y. """
+        """Getter for y.
+        Get Rectangle's y coordenate information."""
         return self.__y
 
     @y.setter
@@ -109,8 +133,11 @@ class Rectangle(Base):
         """ Returns the area value of the instance."""
         return self.__width * self.__height
 
-    def display(self):
-        """ Prints the Rectangle in stdout."""
+    def display(self): 
+        """Print to stdout the graphic representation
+        of the object taking x and y as reference
+        to the position of the object in the screen
+        """
         for i in range(self.__height):
             for e in range(self.__width):
                 print('#', end='')
@@ -126,12 +153,6 @@ class Rectangle(Base):
             for idx, value in enumerate(args):
                 if idx < 5 and hasattr(self, attributes[idx]):
                     setattr(self, attributes[idx], value)
-
-                else:
-                    print("Aparentemente no tiene", attributes[idx])
-
-        else:
-            print("No entra al if")
 
     def __str__(self):
         """Print the data of each instance."""
