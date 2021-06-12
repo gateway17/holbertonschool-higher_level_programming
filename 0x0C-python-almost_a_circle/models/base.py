@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Base module
+"""
 
 class Base:
     """Creates "IDs" for instances. """
