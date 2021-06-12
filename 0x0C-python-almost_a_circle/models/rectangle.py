@@ -111,10 +111,9 @@ class Rectangle(Base):
                 print('#', end='')
             print("")
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ Updates new values for varibles:
-            self.id, self.__width, self.__height,self.__x ,self.__y
-        
+        self.id, self.__width, self.__height,self.__x ,self.__y
         """
 
         if args is not None and len(args) > 0:
@@ -131,6 +130,7 @@ class Rectangle(Base):
 
 
     def __str__(self):
+        """Print the data of each instance."""
         self.ft = "[Rectangle] ({}) {}/{} - {}/{}"
         return (self.ft.format(self.id, self.__x, self.__y, self.__width, self.__height))
 

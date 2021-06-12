@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 
-
 class Base:
     """Creates "IDs" for instances. """
 
