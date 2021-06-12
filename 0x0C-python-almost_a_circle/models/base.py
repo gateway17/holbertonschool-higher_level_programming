@@ -3,6 +3,7 @@
 Base module
 """
 
+
 class Base:
     """Creates "IDs" for instances. """
 
