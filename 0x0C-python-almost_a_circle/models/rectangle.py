@@ -1,5 +1,10 @@
 #!/usr/bin/python3
 
+"""
+Rectangle class:
+Creates and manage a Rectangle
+"""
+
 from base import Base
 
 
@@ -36,7 +41,7 @@ class Rectangle(Base):
             raise ValueError("y must be > 0")
         else:
             self.__y = y
-        
+
         super().__init__(id)
 
     @property
@@ -124,31 +129,12 @@ class Rectangle(Base):
 
                 else:
                     print("Aparentemente no tiene", attributes[idx])
-            
+
         else:
             print("No entra al if")
-
 
     def __str__(self):
         """Print the data of each instance."""
         self.ft = "[Rectangle] ({}) {}/{} - {}/{}"
-        return (self.ft.format(self.id, self.__x, self.__y, self.__width, self.__height))
-
-
-r1 = Rectangle(10, 10, 10, 10)
-print(r1)
-
-r1.update(89)
-print(r1)
-
-r1.update(89, 2)
-print(r1)
-
-r1.update(89, 2, 3)
-print(r1)
-
-r1.update(89, 2, 3, 4)
-print(r1)
-
-r1.update(89, 2, 3, 4, 5)
-print(r1)
+        return (self.ft.format\
+            (self.id, self.__x, self.__y, self.__width, self.__height))
