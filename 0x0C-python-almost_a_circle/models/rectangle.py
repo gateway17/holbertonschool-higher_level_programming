@@ -5,7 +5,7 @@ Rectangle class:
 Creates and manage a Rectangle
 """
 
-from base import Base
+from models.base import Base
 # Base = __import__("models.base", fromlist=[None]).Base
 
 

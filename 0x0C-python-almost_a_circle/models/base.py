@@ -12,6 +12,7 @@ class Base:
 
     def __init__(self, id=None):
         """Creates an instance of Base """
+
         if id is not None:
 
             self.id = id
@@ -23,6 +24,7 @@ class Base:
     def to_json_string(list_dictionaries):
         """Converts dictionary into str
             returns string. """
+
         new_d = '"[]"'
         if list_dictionaries is None:
             return str(new_d)

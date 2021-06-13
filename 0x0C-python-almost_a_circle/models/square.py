@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-from rectangle import Rectangle
+from models.rectangle import Rectangle
 """
 Sets and manage an Square
 """
