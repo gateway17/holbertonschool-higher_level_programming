@@ -23,17 +23,19 @@ class Base:
     def to_json_string(list_dictionaries):
         """Converts dictionary into str
             returns string. """
+        new_d = '"[]"'
         if list_dictionaries is None:
-            return "[]"
+            return str(new_d)
         else:
-            if type(list_dictionaries) is list:  #Unittest
-#list_dic is a list of dic, How do i know it is really dicts? Make sure
-                return json.dumps(list_dictionaries) 
+            if type(list_dictionaries) is list:  # Unittest
+                # list_dic is a list of dic, How do i know it is
+                # really dicts? Make sure
+                return json.dumps(list_dictionaries)
 """
     @classmethod
     def save_to_file(cls, list_objs):
         new = dict
-#Unittest, What if the list of instances are from diferents classes?
+# Unittest, What if the list of instances are from diferents classes?
         if not list_objs:
             return new
         else:
