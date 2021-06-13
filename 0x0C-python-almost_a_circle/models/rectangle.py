@@ -9,15 +9,7 @@ from base import Base
 # Base = __import__("models.base", fromlist=[None]).Base
 
 class Rectangle(Base):
-    """ Creates and manage a Rectangle
-
-    Properties:
-        width (int): width of the instance
-        height (int): height of the instance
-        x (int): x coordenate
-        y (int): y coordenate
-        id (int): objects ID
-
+    """ Creates and manage a Rectangle.
     Methods:
         __init__(self, width, height, x=0, y=0, id=None)
         def area(self)
@@ -31,35 +23,36 @@ class Rectangle(Base):
     """
     def __init__(self, width, height, x=0, y=0, id=None):
         """Sets size for Rectangle
-        Arguments: width, height,[x=0, y=0], id=None """
+        Arguments: width, height,[x=0, y=0], id=None
+        """
 
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
         elif width <= 0:
             raise ValueError("width must be > 0")
         else:
-            self.__width = width
+            self.width = width
 
         if not isinstance(height, int):
             raise TypeError("height must be an integer")
         elif height <= 0:
             raise ValueError("height must be > 0")
         else:
-            self.__height = height
+            self.height = height
 
         if not isinstance(x, int):
             raise TypeError("x must be an integer")
         elif x < 0:
             raise ValueError("x must be > 0")
         else:
-            self.__x = x
+            self.x = x
 
         if not isinstance(y, int):
             raise TypeError("y must be an integer")
         elif y < 0:
             raise ValueError("y must be > 0")
         else:
-            self.__y = y
+            self.y = y
 
         super().__init__(id)
 
@@ -138,14 +131,14 @@ class Rectangle(Base):
         of the object taking x and y as reference
         to the position of the object in the screen
         """
-        for i in range(self.__height):
-            for e in range(self.__width):
+        for i in range(self.height):
+            for e in range(self.width):
                 print('#', end='')
             print("")
 
     def update(self, *args, **kwargs):
         """ Updates new values for varibles:
-        self.id, self.__width, self.__height,self.__x ,self.__y
+        self.id, self.width, self.height,self.x ,self.y
         """
 
         if args is not None and len(args) > 0:
@@ -154,8 +147,21 @@ class Rectangle(Base):
                 if idx < 5 and hasattr(self, attributes[idx]):
                     setattr(self, attributes[idx], value)
 
+        else:
+            if kwargs is not None:
+                for key, value in kwargs.items():
+                    if hasattr(self, key):
+                        setattr(self, key, value)
+
     def __str__(self):
         """Print the data of each instance."""
         self.ft = "[Rectangle] ({}) {}/{} - {}/{}"
         return (self.ft.format\
-            (self.id, self.__x, self.__y, self.__width, self.__height))
+            (self.id, self.x, self.y, self.width, self.height))
+
+
+    def to_dictionary(self):
+        """Returns a Diccionary values of:
+            x, y, id, height, width """
+        return {'x': self.x, 'y': self.y, 'id': self.id, 'height': self.height, 'width': self.width}
+
