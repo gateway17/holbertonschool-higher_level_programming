@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
-from rectangle import Rectangle
 """
 Sets and manage an Square
 """
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
