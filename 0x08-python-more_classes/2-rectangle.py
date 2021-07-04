@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+"""Set a Rectangle. """
+
 
 class Rectangle:
     """Create a rectangle"""
