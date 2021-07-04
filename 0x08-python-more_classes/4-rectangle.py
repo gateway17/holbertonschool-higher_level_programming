@@ -82,7 +82,7 @@ class Rectangle:
         else:
             return (self.__width * 2) + (self.__height * 2)
 
-    def __str__(self):
+    def __str__(self) -> str:
         """Prints area of rectangle with '#' Character."""
         string = ''
 
@@ -96,6 +96,6 @@ class Rectangle:
         string = string[:-1]
         return string
 
-    def __repr__(self):
-        return '{self.__class__.__name__}({self.width}, \
-                {self.height})'.format(self=self)
+    def __repr__(self) -> str:
+        """ """
+        return "Rectangle({}, {})".format(self.__width, self.__height)
