@@ -141,10 +141,10 @@ class Rectangle(Base):
         to the position of the object in the screen
         """
 
+        print("\n"*self.y, end="")
         for i in range(self.height):
-            for e in range(self.width):
-                print('#', end='')
-            print("")
+            print(" "*self.x, end="")
+            print("#"*self.width)
 
     def update(self, *args, **kwargs):
         """ Updates new values for varibles:
