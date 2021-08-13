@@ -23,4 +23,8 @@ function factorial(i) {
     }
 }
 
+if (process.argv[2] === undefined) {
+    process.argv[2] = 1
+}
+
 console.log(factorial(parseInt(process.argv[2])))
