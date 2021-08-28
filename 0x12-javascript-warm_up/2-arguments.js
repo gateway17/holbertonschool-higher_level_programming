@@ -8,16 +8,13 @@
     Otherwise, print “Arguments found”
     You must use console.log(...) to print all output
     You are not allowed to use var
- 
+
 */
 
-
 if (process.argv.length === 2) {
-    console.log('No argument');
-}
-else if (process.argv.length === 3) {
-    console.log('Argument found');
-}
-else if (process.argv.length > 4) {
-    console.log('Arguments found');
+  console.log('No argument');
+} else if (process.argv.length === 3) {
+  console.log('Argument found');
+} else if (process.argv.length > 4) {
+  console.log('Arguments found');
 }

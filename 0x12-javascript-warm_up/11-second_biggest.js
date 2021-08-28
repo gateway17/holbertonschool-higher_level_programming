@@ -1,5 +1,5 @@
 #!/usr/bin/nodejs
-'use strict'
+'use strict';
 /**
  * Write a script that searches the second biggest integer in the list of arguments.
 
@@ -11,5 +11,5 @@
 
  */
 
-let new_list = process.argv.slice(2, -1);
-console.log(new_list)
+const newList = process.argv.slice(2, -1);
+console.log(newList);

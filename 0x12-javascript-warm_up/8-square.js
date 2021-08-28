@@ -1,5 +1,5 @@
 #!/usr/bin/nodejs
-'use strict'
+'use strict';
 
 /**
  * Write a script that prints a square
@@ -14,13 +14,10 @@
  */
 
 if (isNaN(process.argv[2])) {
-
-    console.log("Missing size");
+  console.log('Missing size');
 } else {
-
-    for (let i = 0; i < parseInt(process.argv[2]); i++) {
-        
-        let char = 'X';
-        console.log(char.repeat(parseInt(process.argv[2])))
-    }
+  for (let i = 0; i < parseInt(process.argv[2]); i++) {
+    const char = 'X';
+    console.log(char.repeat(parseInt(process.argv[2])));
+  }
 }

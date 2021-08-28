@@ -1,5 +1,5 @@
 #!/usr/bin/nodejs
-'use strict'
+'use strict';
 /**
  * Write a script that prints x times “C is fun”
 
@@ -13,13 +13,9 @@
 */
 
 if (isNaN(process.argv[2])) {
-
-    console.log("Missing number of occurrences");
+  console.log('Missing number of occurrences');
 } else {
- 
-    for (let ctr = 0; ctr < parseInt(process.argv[2]); ctr++) {
-    
-        console.log("C is fun");
-   
-    }
+  for (let ctr = 0; ctr < parseInt(process.argv[2]); ctr++) {
+    console.log('C is fun');
+  }
 }

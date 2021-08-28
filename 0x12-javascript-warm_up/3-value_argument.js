@@ -7,12 +7,11 @@
     You must use console.log(...) to print all output
     You are not allowed to use var
     You are not allowed to use length
- 
+
 */
 
 if (process.argv) {
-    console.log(process.argv[2]);
-}
-else {
-    console.log('No argument');
+  console.log(process.argv[2]);
+} else {
+  console.log('No argument');
 }

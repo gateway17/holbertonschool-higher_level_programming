@@ -1,5 +1,5 @@
 #!/usr/bin/nodejs
-'use strict'
+'use strict';
 
 /**
  * Write a script that prints the addition of 2 integers
@@ -12,12 +12,12 @@
 
 */
 
-function add(a, b) {
-    // Convert from string to int and print it
-    console.log( parseInt(a) + parseInt(b));
+function add (a, b) {
+  // Convert from string to int and print it
+  console.log(parseInt(a) + parseInt(b));
 }
 // making it better readable
-let num1 = process.argv[2];
-let num2 = process.argv[3];
+const num1 = process.argv[2];
+const num2 = process.argv[3];
 // Call function
 add(num1, num2);

@@ -1,5 +1,5 @@
 #!/usr/bin/nodejs
-'use strict'
+'use strict';
 
 /**
  * Write a script that computes and prints a factorial
@@ -11,20 +11,18 @@
     You must use console.log(...) to print all output
     You are not allowed to use var
 
-
 */
 
-function factorial(i) {
-
-    if (i == 1) {
-        return 1
-    } else {
-        return i * factorial(i - 1)
-    }
+function factorial (i) {
+  if (i === 1) {
+    return 1;
+  } else {
+    return i * factorial(i - 1);
+  }
 }
 
 if (process.argv[2] === undefined) {
-    process.argv[2] = 1
+  process.argv[2] = 1;
 }
 
-console.log(factorial(parseInt(process.argv[2])))
+console.log(factorial(parseInt(process.argv[2])));
