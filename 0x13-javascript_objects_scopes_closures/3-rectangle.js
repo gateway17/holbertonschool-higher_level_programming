@@ -1,5 +1,5 @@
 #!/usr/bin/nodejs
-'use strict'
+'use strict';
 /*
 Write a class Rectangle that defines a rectangle:
 
@@ -11,21 +11,18 @@ Write a class Rectangle that defines a rectangle:
     Create an instance method called print() that prints the rectangle using the character X
 */
 
-class Rectangle {
-    constructor(w, h) {
-        
-        if(w > 0 || h > 0) {
-            this.width = w;
-            this.height = h;
-
-        }
+module.exports = class Rectangle {
+  constructor (w, h) {
+    if (w > 0 || h > 0) {
+      this.width = w;
+      this.height = h;
     }
+  }
 
-    print() {
-        let Character = 'X';
-        for (let i = 0; i < this.height;i++) {
-            console.log(Character.repeat(this.width));
-    
-        }
+  print () {
+    const Character = 'X';
+    for (let i = 0; i < this.height; i++) {
+      console.log(Character.repeat(this.width));
     }
-}
+  }
+};

@@ -1,5 +1,5 @@
 #!/usr/bin/nodejs
-'use strict'
+'use strict';
 /**
 Write an empty class Rectangle that defines a rectangle:
 

@@ -1,5 +1,5 @@
 #!/usr/bin/nodejs
-'use strict'
+'use strict';
 /*
 Write a function that prints the number of arguments already printed and the new argument value. (see example below)
 
@@ -7,10 +7,9 @@ Write a function that prints the number of arguments already printed and the new
     Output format: <number arguments already printed>: <current argument value>
 
 */
-var Counter = 0;
+let Counter = 0;
 
 exports.logMe = function (item) {
-
-    console.log(`${Counter}: ${item}`);
-    Counter++;
-}
+  console.log(`${Counter}: ${item}`);
+  Counter++;
+};
