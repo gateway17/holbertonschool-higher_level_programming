@@ -17,6 +17,7 @@ target = argv[1]
 try:
     respond = request.Request(target)
     with request.urlopen(respond) as buffer:
+        """ Make a GET request and decode in utf-8 """
         file = buffer.read()
         print(file.decode('utf-8'))
 

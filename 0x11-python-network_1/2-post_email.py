@@ -23,5 +23,6 @@ data = parse.urlencode(value)
 data = data.encode('utf-8')
 req = request.Request(url, data)
 with request.urlopen(req) as response:
+    """ Make a POST request, sending a Email """
     resp = response.read()
     print(resp)

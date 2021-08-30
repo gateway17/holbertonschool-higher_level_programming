@@ -15,6 +15,6 @@ from sys import argv
 att = 'X-Request-Id'  # Just change the value of this var,
 # to find that property in header
 with request.urlopen(argv[1]) as buffer:
-
+    """ Make the request and prints the 'X-Request-Id' atribute in header """
     header = buffer.info()
     print(header[att])
